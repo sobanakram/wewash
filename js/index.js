@@ -2,8 +2,8 @@ $(document).ready(function () {
 
     let navbarLink = $(".navbar-nav a");
     navbarLink.filter(function () {
-            return this.href == location.href;
-        }).parent().addClass("active").siblings().removeClass("active");
+        return this.href == location.href;
+    }).parent().addClass("active").siblings().removeClass("active");
     navbarLink.click(function () {
         $(this).parent().addClass("active").siblings().removeClass("active");
     });
@@ -44,9 +44,14 @@ $(document).ready(function () {
     });
 
     $(".image-slider").slick({
-            dots: true,
-            arrows: false
-        }).on("setPosition", function (event, slick) {
-            slick.$slides.css("height", slick.$slideTrack.height() + "px");
-        });
+        dots: true,
+        arrows: false
+    }).on("setPosition", function (event, slick) {
+        slick.$slides.css("height", slick.$slideTrack.height() + "px");
+    });
+
+    // $('.navbar-toggler').click(function () {
+    //     $('#navbarSupportedContent').css('width: 100%;');
+    //     // $('.navbar-collapse').toggleClass('navbar-menu');
+    // });
 });

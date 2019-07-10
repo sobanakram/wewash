@@ -115,7 +115,7 @@ p, a {
 .content-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 5em 5em;
+    padding: 4em 5em 3.5em;
 }
 
 .content-wrapper h4 {
@@ -135,7 +135,8 @@ p, a {
     color: rgba(0, 0, 0, 0.35);
     padding: 0.7em 1.9em;
     background-color: #f7f9fd;
-    width: 70%;
+    /*width: 70%;*/
+    width: 65%;
     margin-right: 15px;
 }
 
@@ -150,7 +151,7 @@ p, a {
 }
 
 .copyright-section {
-    padding-top: 2.5em;
+    padding-top: 1.5em;
 }
 
 .copyright-section > p {
@@ -160,6 +161,23 @@ p, a {
 .copyright-section a {
     text-decoration: underline;
     color: #000000;
+}
+
+.subscribe-section h4 {
+    font-size: 1.3em;
+}
+
+.subscribe-section p,
+.copyright-section p {
+    font-size: 14px;
+}
+
+.social-links img {
+    width: 2.4rem;
+}
+
+.social-links a {
+    padding-right: 7px;
 }
 
 .mobile-view {
@@ -187,11 +205,22 @@ p, a {
 .about-header-section h3:after, .pricing-plans-heading h3:after, .faq-header-section h3:after, .how-it-works-section h3:after {
     position: absolute;
     left: 50%;
-    width: 4%;
     height: 1.4em;
     border-bottom: 2px solid #4eb2ff;
     content: "";
     transform: translateX(-51%);
+}
+
+.pricing-plans-heading h3:after, .how-it-works-section h3:after {
+    width: 4%;
+}
+
+.about-header-section h3:after {
+    width: 6.5%;
+}
+
+.faq-header-section h3:after {
+    width: 7%;
 }
 
 .accordion {
@@ -211,7 +240,7 @@ p, a {
     cursor: pointer;
     display: flex;
     align-items: center;
-    padding: 1.5rem 3.5rem !important;
+    padding: 1.2rem 3.5rem !important;
     border: none !important;
     background-color: #e5ecf9 !important;
 }
@@ -275,7 +304,7 @@ p, a {
     padding-right: auto;
     margin-top: 15px;
     box-shadow: 0 15px 40px rgba(132, 156, 174, 0.15);
-    border-radius: 1em !important;
+    border: none !important;
 }
 
 .pricing-plans-container .card-block {
@@ -306,8 +335,18 @@ p, a {
 /* About page */
 
 .team-section {
-    padding: 6em 2em;
+    padding: 6em 2em 7em;
     background-color: #f7f9fd;
+}
+
+.team-content {
+    margin-top: 1em;
+}
+
+.team-content h4 {
+    margin-bottom: 2px;
+    font-size: 20px;
+    color: #2D303A;
 }
 
 .about-heading-container {
@@ -325,6 +364,7 @@ p, a {
 }
 
 .team-role {
+    font-size: 14px;
     color: rgba(45, 48, 58, 0.8);
 }
 
@@ -339,7 +379,22 @@ p, a {
 }
 
 .people-review-section .container {
-    padding: 5em 2em;
+    padding: 2em 2em;
+}
+
+.what-people-say-wrapper {
+    padding-top: 7em;
+    padding-bottom: 7em;
+}
+
+.about-heading-container h3,
+.team-section h3,
+.what-people-say-wrapper h3 {
+    font-size: 1.5rem;
+}
+
+.our-team-row {
+    padding-top: 3em;
 }
 
 .person-role {
@@ -350,7 +405,17 @@ p, a {
 .quote-mark {
     display: inline !important;
     position: absolute;
-    top: 23em;
+    top: 10.5em;
+}
+
+.description-container {
+    padding: 4em 8em 2em;
+}
+
+.description-container p {
+    font-size: 18px;
+    line-height: 1.4em;
+    margin-bottom: 0;
 }
 
 .slider-items button {
@@ -363,18 +428,18 @@ p, a {
 }
 
 .slick-prev {
-    left: 3.2rem !important;
-    top: 25rem !important;
+    left: 6rem !important;
+    top: 12.5rem !important;
 }
 
 .slick-next {
-    right: 3.2rem !important;
-    top: 25rem !important;
+    right: 6rem !important;
+    top: 12.5rem !important;
 }
 
 .slick-prev, .slick-next {
-    width: 50px !important;
-    height: 50px !important;
+    width: 35px !important;
+    height: 35px !important;
 }
 
 .cards-wrapper {
@@ -387,7 +452,20 @@ p, a {
     padding: 1em 2em;
     width: 500px;
     margin-left: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
+}
+
+.card-wrapper p {
+    font-size: 15px;
+}
+
+.person-name h4 {
+    margin-bottom: 2px;
+}
+
+.person-name h4,
+.card-wrapper h4 {
+    font-size: 1.3rem;
 }
 
 .card-wrapper h5 {
@@ -396,12 +474,12 @@ p, a {
 
 .card-wrapper a:link {
     text-decoration: none;
+    font-size: 1.2em;
 }
 
 .cards-container {
     padding: 0 5em;
     overflow-x: scroll;
-    /* white-space: nowrap; */
 }
 
 .cards-container::-webkit-scrollbar {
@@ -488,6 +566,10 @@ p, a {
     bottom: 25px !important;
 }
 
+.slider-items .slick-dots {
+    bottom: -10px !important;
+}
+
 .slick-dots li {
     width: 2px !important;
 }
@@ -531,9 +613,12 @@ a {
     .pricing-plans-cards .row > div {
         max-width: 33%;
     }
+}
 
-    .description-container {
-        padding: 0 8em;
+@media (min-width: 1140px) and (max-width: 1400px) {
+
+    .team-section .col-sm-3 {
+        max-width: 17% !important;
     }
 }
 
@@ -582,6 +667,14 @@ a {
 
     .about-heading-container {
         padding: 7em 2em 3em;
+    }
+
+    .description-container {
+        padding: 4em 3em 2em;
+    }
+
+    .faq-header-section h3:after {
+        width: 7% !important;
     }
 }
 
@@ -642,6 +735,7 @@ a {
 
     .img-div {
         background: url("../images/bg.svg") no-repeat;
+        background-size: cover;
     }
 
     .hero-section .text-hold {
@@ -665,11 +759,8 @@ a {
         margin-top: 0.5em !important;
     }
 
-    .navbar-collapse {
+    .header-navbar .navbar-collapse {
         height: 100vh;
-    }
-
-    .navbar-collapse {
         background-image: linear-gradient(#0793ff, #28a7cc);
         padding: 1rem 1.5rem !important;
     }
@@ -716,6 +807,14 @@ a {
         display: none !important;
     }
 
+    .email-input {
+        width: 60%;
+    }
+
+    .subscribe-button {
+        padding: 0.7em 1.2em;
+    }
+
     .desktop-view {
         display: none;
     }
@@ -724,6 +823,31 @@ a {
         display: block;
     }
 }
+
+/*@media (min-width: 576px) {*/
+/*.navbar-expand-sm {*/
+/*-ms-flex-flow: row nowrap;*/
+/*!* flex-flow: row nowrap; *!*/
+/*-ms-flex-pack: start;*/
+/*!* justify-content: flex-start; *!*/
+/*}*/
+/*}*/
+
+/*.navbar-collapse {*/
+/*height: 100%;*/
+/*width: 100%;*/
+/*position: fixed;*/
+/*z-index: 1;*/
+/*top: 4.4em;*/
+/*right: 0;*/
+/*overflow-x: hidden;*/
+/*transition: 0.5s;*/
+/*height: 100vh;*/
+/*background-image: linear-gradient(#0793ff, #28a7cc);*/
+/*padding: 1rem 1.5rem !important;*/
+
+/*}*/
+
 
 
 
