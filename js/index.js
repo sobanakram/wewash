@@ -50,8 +50,4 @@ $(document).ready(function () {
         slick.$slides.css("height", slick.$slideTrack.height() + "px");
     });
 
-    // $('.navbar-toggler').click(function () {
-    //     $('#navbarSupportedContent').css('width: 100%;');
-    //     // $('.navbar-collapse').toggleClass('navbar-menu');
-    // });
 });
