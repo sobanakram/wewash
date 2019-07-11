@@ -110,16 +110,6 @@ li a {
     position: relative;
 }
 
-/*.hero-section-container {*/
-/*!*height: 100vh;*!*/
-/*!*background: url("../images/hero-img-full.png") no-repeat 0 0;*!*/
-/*background: url("../images/hero-img-full.png") no-repeat 0 0;*/
-/*!*background-position: 100% 0;*!*/
-/*background-size: cover;*/
-/*width: 100%;*/
-/*height: 100%;*/
-/*}*/
-
 .hero-section {
     position: absolute;
     left: 0;
@@ -213,7 +203,6 @@ p, a {
     color: rgba(0, 0, 0, 0.35);
     padding: 0.7em 1.9em;
     background-color: #f7f9fd;
-    /*width: 70%;*/
     width: 65%;
     margin-right: 15px;
 }
@@ -679,6 +668,11 @@ a {
     cursor: pointer;
 }
 
+.quote-mark-div {
+    display: flex;
+    justify-content: center;
+}
+
 /* Responsiveness */
 
 @media only screen and (min-width: 1400px) {
@@ -723,6 +717,20 @@ a {
 }
 
 @media only screen and (max-width: 960px) {
+
+    .header-navbar {
+        padding: 1em 3.2em !important;
+    }
+
+    .header-navbar .download-btn {
+        right: 3.2em;
+        top: 1.3em;
+    }
+
+    .hero-section {
+        padding-left: 2.2em;
+    }
+
     .faq-container {
         padding: 7em 5em;
     }
