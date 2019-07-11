@@ -1,3 +1,15 @@
+function toggleMobileNav() {
+    var toggleBtn = $("#navToggleBtn");
+    var nav = document.getElementById("mobileNav");
+    if (nav.style.transform !== "translateX(-100%)" || nav.style.transform === "") {
+        nav.style.transform = "translateX(-100%)";
+        toggleBtn.toggleClass("collapsed");
+    } else {
+        nav.style.transform = "translateX(0%)";
+        toggleBtn.toggleClass("collapsed");
+    }
+}
+
 $(document).ready(function () {
 
     let navbarLink = $(".navbar-nav a");
@@ -8,6 +20,16 @@ $(document).ready(function () {
         $(this).parent().addClass("active").siblings().removeClass("active");
     });
 
+    var toggleBtn = $("#navToggleBtn");
+    toggleBtn.click(function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        toggleMobileNav();
+    });
+
+    $(".mobile-nav-item a").click(function () {
+        toggleMobileNav();
+    });
 
     let packageButton = $(".package-btn button");
     packageButton.click(function (e) {
@@ -40,7 +62,7 @@ $(document).ready(function () {
 
     $(".image-slider").on("click", function (e) {
         $(".package-btn button").removeClass("active-btn");
-        $(`.btn${parseInt(e.target.textContent)}`).addClass("active-btn");
+        $(`.btn${ parseInt(e.target.textContent) }`).addClass("active-btn");
     });
 
     $(".image-slider").slick({
