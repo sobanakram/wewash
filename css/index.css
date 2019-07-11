@@ -53,18 +53,27 @@ li a {
 }
 
 .nav-link {
-  color: #2d303a;
+    color: #2d303a;
+    margin-top: 0.2em;
+}
+
+.nav-item {
+    padding-right: 1em;
+}
+
+.navbar-collapse {
+    padding-left: 2em;
 }
 
 .download-btn {
-  border-radius: 25px;
-  border: none;
-  background-color: #f14c5d;
-  box-shadow: 0 8px 20px rgba(132, 156, 174, 0.2);
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 10px 30px;
+    border-radius: 25px;
+    border: none;
+    background-color: #f14c5d;
+    box-shadow: 0 8px 20px rgba(132, 156, 174, 0.2);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 30px;
 }
 
 .header-navbar .download-btn {
@@ -102,8 +111,12 @@ li a {
 }
 
 .hero-section-container {
+<<<<<<< HEAD
   height: 100vh;
   background: url("../images/hero-img.svg") no-repeat 100% 0;
+=======
+    position: relative;
+>>>>>>> 5843da7f3fae721149f8654e4e3858407e282786
 }
 
 .hero-section {
@@ -117,14 +130,37 @@ li a {
   padding-right: 5em;
 }
 
-.text-hold1 p {
-  color: #a0a7b9;
+.nav-item {
+    padding-right: 1em;
+}
+
+.navbar-collapse {
+    padding-left: 2em;
+}
+
+.hero-section .text-hold-container {
+    max-width: 50em;
+}
+
+.hero-section .text-hold p {
+    color: #a0a7b9;
+    padding-right: 2em;
 }
 
 .hero-section button {
   font-size: 16px;
   padding: 14px 35px;
   background-image: linear-gradient(#0793ff, #04c8cf);
+}
+
+.img-wrapper .desktop-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.img-wrapper .mobile-img {
+    display: none;
 }
 
 .text-hold h2 {
@@ -153,12 +189,6 @@ a {
   background-image: linear-gradient(#0793ff, #04c8cf);
 }
 
-.img-div {
-  height: 100vh;
-  background: url("../images/hero-img.svg") no-repeat;
-  background-size: cover;
-}
-
 .footer {
   background-color: #f7f9fd;
 }
@@ -179,16 +209,15 @@ a {
 }
 
 .email-input {
-  font-family: "Brandon";
-  font-size: 14px;
-  border-radius: 5px;
-  border: solid 1px rgba(52, 52, 52, 0.1);
-  color: rgba(0, 0, 0, 0.35);
-  padding: 0.7em 1.9em;
-  background-color: #f7f9fd;
-  /*width: 70%;*/
-  width: 65%;
-  margin-right: 15px;
+    font-family: "Brandon";
+    font-size: 14px;
+    border-radius: 5px;
+    border: solid 1px rgba(52, 52, 52, 0.1);
+    color: rgba(0, 0, 0, 0.35);
+    padding: 0.7em 1.9em;
+    background-color: #f7f9fd;
+    width: 65%;
+    margin-right: 15px;
 }
 
 .subscribe-button {
@@ -659,6 +688,11 @@ a {
   cursor: pointer;
 }
 
+.quote-mark-div {
+    display: flex;
+    justify-content: center;
+}
+
 /* Responsiveness */
 
 @media only screen and (min-width: 1400px) {
@@ -702,24 +736,51 @@ a {
 }
 
 @media only screen and (max-width: 960px) {
-  .faq-container {
-    padding: 7em 5em;
-  }
 
-  .how-it-works-section .container {
-    max-width: 100% !important;
-    padding: 0 !important;
-  }
+    .header-navbar {
+        padding: 1em 3.2em !important;
+    }
+
+    .header-navbar .download-btn {
+        right: 3.2em;
+        top: 1.3em;
+    }
+
+    .hero-section {
+        padding-left: 2.2em;
+    }
+
+    .faq-container {
+        padding: 7em 5em;
+    }
+
+    .how-it-works-section .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .nav-item {
+        padding-right: 0;
+    }
+
+    .navbar-collapse {
+        padding-left: 0;
+    }
 }
 
 @media only screen and (max-width: 767px) {
-  .header-navbar {
-    padding: 2em 1em !important;
-  }
+    .header-navbar {
+        padding: 1em 1em !important;
+    }
 
-  .header-navbar .download-btn {
-    right: 1.2em;
-  }
+    .hero-section .text-hold-container {
+        margin-top: 3em;
+    }
+
+    .header-navbar .download-btn {
+        right: 1.2em;
+        top: 1.3em;
+    }
 
   .content-wrapper {
     padding: 5em 2em;
@@ -756,50 +817,112 @@ a {
     padding-right: 0 !important;
   }
 
-  .hero-section {
-    padding-right: 8em;
-  }
+    .navbar-nav .nav-link {
+        padding-right: 0 !important;
+    }
 
-  .text-hold h2 {
-    font-size: 1.4em;
-  }
+    .hero-section {
+        padding-right: 8em;
+    }
 
-  .text-hold p {
-    font-size: 15px;
-  }
+    .text-hold h2 {
+        font-size: 1.4em;
+    }
 
-  .faq-container {
-    padding: 7em 2em;
-  }
+    .text-hold p {
+        font-size: 15px;
+    }
 
-  .content-wrapper {
-    text-align: center;
-    position: relative;
-    display: block;
-    padding: 8em 4em 4em 4em;
-  }
+    .faq-container {
+        padding: 7em 2em;
+    }
 
-  .copyright-section {
-    padding-top: 1.5em;
-  }
+    .content-wrapper {
+        text-align: center;
+        position: relative;
+        display: block;
+        padding: 8em 4em 4em 4em;
+    }
 
-  .social-links {
-    position: absolute;
-    top: 3.5em;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: max-content;
-  }
+    .copyright-section {
+        padding-top: 1.5em;
+    }
+
+    .social-links {
+        position: absolute;
+        top: 3.5em;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: max-content;
+    }
+
+    .social-links img {
+        width: 3rem;
+        margin-right: 0.6em;
+    }
+
+    .pricing-plans-container {
+        padding: 4em 0;
+    }
+
+    .pricing-plans-cards .row > div {
+        max-width: 62%;
+    }
+
+    .header-navbar .download-btn {
+        top: 2.9em;
+        font-size: 8px;
+        right: 2em;
+    }
+
+    .hr-line {
+        width: 12%;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .header-navbar {
+        background-color: white !important;
+        position: fixed !important;
+        padding: 0 !important;
+        box-shadow: 0 15px 40px rgba(132, 156, 174, 0.15);
+    }
+
+    .img-wrapper .desktop-img {
+        display: none;
+    }
+
+    .img-wrapper .mobile-img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .hero-section {
+        padding-right: 0;
+    }
+
+    .hero-section .download-btn {
+        margin-top: 1em;
+    }
+
+    .hero-section h2 {
+        margin-bottom: 1em;
+    }
 
   .social-links img {
     width: 3rem;
     margin-right: 0.6em;
   }
 
-  .pricing-plans-container {
-    padding: 4em 0;
-  }
+    .navbar-brand {
+        margin: 1rem 1rem;
+    }
+
+    .navbar-toggler {
+        margin: 1rem 0.5rem;
+    }
 
   .pricing-plans-cards .row > div {
     max-width: 62%;
@@ -839,9 +962,11 @@ a {
     color: #ffffff;
   }
 
-  .nav-item {
-    padding-top: 0.8em;
-  }
+    .header-navbar .download-btn {
+        top: 2em;
+        right: 6.5em;
+        font-size: 10px;
+    }
 
   .hr_line {
     border-top: 1px solid rgba(255, 255, 255, 0.28);
