@@ -69,19 +69,35 @@ li a {
     right: 5.8em;
 }
 
-.text-hold-container {
-    display: table;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+.hero-section-container {
+    height: 100vh;
+    background: url("../images/hero-img.svg") no-repeat;
+    background-position: 100% 0;
 }
 
-.text-hold {
-    display: table-cell;
-    vertical-align: middle;
-    padding-left: 5em;
+.hero-section {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 4em;
+    padding-right: 5em;
+}
+
+.text-hold1 p {
+    color: #a0a7b9;
+}
+
+.hero-section button {
+    font-size: 16px;
+    padding: 14px 35px;
+    background-image: linear-gradient(#0793ff, #04c8cf);
+}
+
+.text-hold h2 {
+    font-size: 1.88em;
 }
 
 h1, h2, h3, h4 {
@@ -115,7 +131,7 @@ p, a {
 .content-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 5em 5em;
+    padding: 4em 5em 3.5em;
 }
 
 .content-wrapper h4 {
@@ -135,7 +151,8 @@ p, a {
     color: rgba(0, 0, 0, 0.35);
     padding: 0.7em 1.9em;
     background-color: #f7f9fd;
-    width: 70%;
+    /*width: 70%;*/
+    width: 65%;
     margin-right: 15px;
 }
 
@@ -150,7 +167,7 @@ p, a {
 }
 
 .copyright-section {
-    padding-top: 2.5em;
+    padding-top: 1.5em;
 }
 
 .copyright-section > p {
@@ -160,6 +177,23 @@ p, a {
 .copyright-section a {
     text-decoration: underline;
     color: #000000;
+}
+
+.subscribe-section h4 {
+    font-size: 1.3em;
+}
+
+.subscribe-section p,
+.copyright-section p {
+    font-size: 14px;
+}
+
+.social-links img {
+    width: 2.4rem;
+}
+
+.social-links a {
+    padding-right: 7px;
 }
 
 .mobile-view {
@@ -184,14 +218,13 @@ p, a {
     margin-top: 3em;
 }
 
-.about-header-section h3:after, .pricing-plans-heading h3:after, .faq-header-section h3:after, .how-it-works-section h3:after {
+.hr-line {
     position: absolute;
     left: 50%;
-    width: 4%;
-    height: 1.4em;
     border-bottom: 2px solid #4eb2ff;
     content: "";
     transform: translateX(-51%);
+    width: 5.5%;
 }
 
 .accordion {
@@ -211,7 +244,7 @@ p, a {
     cursor: pointer;
     display: flex;
     align-items: center;
-    padding: 1.5rem 3.5rem !important;
+    padding: 1.2rem 3.5rem !important;
     border: none !important;
     background-color: #e5ecf9 !important;
 }
@@ -257,7 +290,7 @@ p, a {
 /* Pricing Plans */
 
 .pricing-plans-container {
-    padding: 4em 4em;
+    padding: 5.5em 4em 10em;
 }
 
 .pricing-plans-heading {
@@ -266,7 +299,11 @@ p, a {
 }
 
 .pricing-plans-cards {
-    margin-top: 3em;
+    padding-top: 5em;
+}
+
+.card-title {
+    margin-bottom: 0 !important;
 }
 
 .pricing-plans-container .card {
@@ -275,22 +312,29 @@ p, a {
     padding-right: auto;
     margin-top: 15px;
     box-shadow: 0 15px 40px rgba(132, 156, 174, 0.15);
-    border-radius: 1em !important;
+    border: none !important;
 }
 
 .pricing-plans-container .card-block {
     font-size: 12px;
-    padding: 1em;
+    padding: 2em 1em 1.5em;
+}
+
+.pricing-plans-cards .card {
+    border-radius: 0.5rem !important;
 }
 
 .pricing-plans-container .card ul {
+    padding-left: 2em;
     text-align: left;
     font-family: "SF UI Text Medium";
 }
 
 .pricing-plans-container .card ul li {
     list-style: none;
-    padding-top: 0.5em;
+    padding-top: 1.5em;
+    line-height: 1.2em;
+    color: #2D303A;
 }
 
 .pricing-plans-container .card ul li:before {
@@ -299,15 +343,25 @@ p, a {
     vertical-align: middle;
     line-height: 20px;
     position: absolute;
-    left: 0.6em;
+    left: 0.3em;
     color: #b9becc;
 }
 
 /* About page */
 
 .team-section {
-    padding: 6em 2em;
+    padding: 7em 2em 5em;
     background-color: #f7f9fd;
+}
+
+.team-content {
+    margin-top: 1em;
+}
+
+.team-content h4 {
+    margin-bottom: 2px;
+    font-size: 20px;
+    color: #2D303A;
 }
 
 .about-heading-container {
@@ -325,6 +379,7 @@ p, a {
 }
 
 .team-role {
+    font-size: 14px;
     color: rgba(45, 48, 58, 0.8);
 }
 
@@ -339,7 +394,23 @@ p, a {
 }
 
 .people-review-section .container {
-    padding: 5em 2em;
+    padding: 2em 2em;
+}
+
+.what-people-say-wrapper {
+    padding-top: 7em;
+    padding-bottom: 7em;
+}
+
+.about-heading-container h3,
+.pricing-plans-container h3,
+.team-section h3,
+.what-people-say-wrapper h3 {
+    font-size: 1.5rem;
+}
+
+.our-team-row {
+    padding-top: 3em;
 }
 
 .person-role {
@@ -350,7 +421,17 @@ p, a {
 .quote-mark {
     display: inline !important;
     position: absolute;
-    top: 23em;
+    top: 10.5em;
+}
+
+.description-container {
+    padding: 4em 8em 2em;
+}
+
+.description-container p {
+    font-size: 18px;
+    line-height: 1.4em;
+    margin-bottom: 0;
 }
 
 .slider-items button {
@@ -363,18 +444,18 @@ p, a {
 }
 
 .slick-prev {
-    left: 3.2rem !important;
-    top: 25rem !important;
+    left: 6rem !important;
+    top: 12.5rem !important;
 }
 
 .slick-next {
-    right: 3.2rem !important;
-    top: 25rem !important;
+    right: 6rem !important;
+    top: 12.5rem !important;
 }
 
 .slick-prev, .slick-next {
-    width: 50px !important;
-    height: 50px !important;
+    width: 35px !important;
+    height: 35px !important;
 }
 
 .cards-wrapper {
@@ -387,7 +468,20 @@ p, a {
     padding: 1em 2em;
     width: 500px;
     margin-left: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
+}
+
+.card-wrapper p {
+    font-size: 15px;
+}
+
+.person-name h4 {
+    margin-bottom: 2px;
+}
+
+.person-name h4,
+.card-wrapper h4 {
+    font-size: 1.3rem;
 }
 
 .card-wrapper h5 {
@@ -396,12 +490,12 @@ p, a {
 
 .card-wrapper a:link {
     text-decoration: none;
+    font-size: 1.2em;
 }
 
 .cards-container {
     padding: 0 5em;
     overflow-x: scroll;
-    /* white-space: nowrap; */
 }
 
 .cards-container::-webkit-scrollbar {
@@ -422,8 +516,8 @@ p, a {
 .how-it-works-section button {
     font-family: "SF UI Text bold";
     display: block;
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
     border-radius: 50%;
     border: none;
     box-shadow: 0 8px 20px rgba(132, 156, 174, 0.25);
@@ -466,11 +560,19 @@ p, a {
 }
 
 .package-content {
-    margin-top: 2em;
+    margin-top: 1.5em;
+}
+
+.package-content p, .package-content h5 {
+    font-size: 18px;
 }
 
 .package-container {
-    margin-top: 5.5em;
+    margin-top: 4em;
+}
+
+.package-top-positioned {
+    margin-top: 4.5em;
 }
 
 .slick-dots li button:before {
@@ -484,8 +586,12 @@ p, a {
     line-height: 20px;
 }
 
-.slick-dots {
-    bottom: 25px !important;
+.image-slider .slick-dots {
+    bottom: 52px !important;
+}
+
+.slider-items .slick-dots {
+    bottom: -10px !important;
 }
 
 .slick-dots li {
@@ -525,21 +631,32 @@ a {
     .slick-next {
         right: 6rem !important;
     }
+
+    .hr-line {
+        width: 4%;
+    }
 }
 
 @media only screen and (max-width: 1400px) {
     .pricing-plans-cards .row > div {
         max-width: 33%;
     }
+}
 
-    .description-container {
-        padding: 0 8em;
+@media (min-width: 1140px) and (max-width: 1400px) {
+
+    .team-section .col-sm-3 {
+        max-width: 17% !important;
     }
 }
 
 @media only screen and (max-width: 1140px) {
     .pricing-plans-cards .row > div {
         max-width: 43%;
+    }
+
+    .hr-line {
+        width: 7%;
     }
 }
 
@@ -567,8 +684,8 @@ a {
         padding: 5em 2em;
     }
 
-    .hero-section .text-hold h1 {
-        font-size: 1.5rem;
+    .hero-section {
+        padding-left: 0;
     }
 
     .pricing-plans-cards .row > div {
@@ -583,9 +700,34 @@ a {
     .about-heading-container {
         padding: 7em 2em 3em;
     }
+
+    .description-container {
+        padding: 4em 3em 2em;
+    }
+
+    .hr-line {
+        width: 9%;
+    }
 }
 
 @media only screen and (max-width: 678px) {
+
+    .navbar-nav .nav-link {
+        padding-right: 0 !important;
+    }
+
+    .hero-section {
+        padding-right: 8em;
+    }
+
+    .text-hold h2 {
+        font-size: 1.4em;
+    }
+
+    .text-hold p {
+        font-size: 15px;
+    }
+
     .faq-container {
         padding: 7em 2em;
     }
@@ -627,20 +769,20 @@ a {
         top: 4.5em;
         font-size: 8px;
     }
+
+    .hr-line {
+        width: 12%;
+    }
 }
 
-.collapse:not(.show) {
-    display: none;
-}
-
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575px) {
     .header-navbar {
         background-color: white !important;
         position: fixed !important;
         padding: 0 !important;
     }
 
-    .img-div {
+    .hero-section-container {
         background: url("../images/bg.svg") no-repeat;
     }
 
@@ -665,11 +807,8 @@ a {
         margin-top: 0.5em !important;
     }
 
-    .navbar-collapse {
+    .header-navbar .navbar-collapse {
         height: 100vh;
-    }
-
-    .navbar-collapse {
         background-image: linear-gradient(#0793ff, #28a7cc);
         padding: 1rem 1.5rem !important;
     }
@@ -716,6 +855,14 @@ a {
         display: none !important;
     }
 
+    .email-input {
+        width: 60%;
+    }
+
+    .subscribe-button {
+        padding: 0.7em 1.2em;
+    }
+
     .desktop-view {
         display: none;
     }
@@ -724,6 +871,5 @@ a {
         display: block;
     }
 }
-
 
 
