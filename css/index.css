@@ -50,6 +50,15 @@ li a {
 
 .nav-link {
     color: #2d303a;
+    margin-top: 0.2em;
+}
+
+.nav-item {
+    padding-right: 1em;
+}
+
+.navbar-collapse {
+    padding-left: 2em;
 }
 
 .download-btn {
@@ -60,7 +69,7 @@ li a {
     color: #ffffff;
     font-size: 14px;
     font-weight: bold;
-    padding: 10px 30px;
+    padding: 8px 30px;
 }
 
 .header-navbar .download-btn {
@@ -70,10 +79,18 @@ li a {
 }
 
 .hero-section-container {
-    height: 100vh;
-    background: url("../images/hero-img.svg") no-repeat;
-    background-position: 100% 0;
+    position: relative;
 }
+
+/*.hero-section-container {*/
+/*!*height: 100vh;*!*/
+/*!*background: url("../images/hero-img-full.png") no-repeat 0 0;*!*/
+/*background: url("../images/hero-img-full.png") no-repeat 0 0;*/
+/*!*background-position: 100% 0;*!*/
+/*background-size: cover;*/
+/*width: 100%;*/
+/*height: 100%;*/
+/*}*/
 
 .hero-section {
     position: absolute;
@@ -86,14 +103,37 @@ li a {
     padding-right: 5em;
 }
 
-.text-hold1 p {
+.nav-item {
+    padding-right: 1em;
+}
+
+.navbar-collapse {
+    padding-left: 2em;
+}
+
+.hero-section .text-hold-container {
+    max-width: 50em;
+}
+
+.hero-section .text-hold p {
     color: #a0a7b9;
+    padding-right: 2em;
 }
 
 .hero-section button {
     font-size: 16px;
     padding: 14px 35px;
     background-image: linear-gradient(#0793ff, #04c8cf);
+}
+
+.img-wrapper .desktop-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.img-wrapper .mobile-img {
+    display: none;
 }
 
 .text-hold h2 {
@@ -669,15 +709,28 @@ a {
         max-width: 100% !important;
         padding: 0 !important;
     }
+
+    .nav-item {
+        padding-right: 0;
+    }
+
+    .navbar-collapse {
+        padding-left: 0;
+    }
 }
 
 @media only screen and (max-width: 767px) {
     .header-navbar {
-        padding: 2em 1em !important;
+        padding: 1em 1em !important;
+    }
+
+    .hero-section .text-hold-container {
+        margin-top: 3em;
     }
 
     .header-navbar .download-btn {
         right: 1.2em;
+        top: 1.3em;
     }
 
     .content-wrapper {
@@ -766,8 +819,9 @@ a {
     }
 
     .header-navbar .download-btn {
-        top: 4.5em;
+        top: 2.9em;
         font-size: 8px;
+        right: 2em;
     }
 
     .hr-line {
@@ -783,8 +837,26 @@ a {
         box-shadow: 0 15px 40px rgba(132, 156, 174, 0.15);
     }
 
-    .hero-section-container {
-        background: url("../images/bg.svg") no-repeat;
+    .img-wrapper .desktop-img {
+        display: none;
+    }
+
+    .img-wrapper .mobile-img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .hero-section {
+        padding-right: 0;
+    }
+
+    .hero-section .download-btn {
+        margin-top: 1em;
+    }
+
+    .hero-section h2 {
+        margin-bottom: 1em;
     }
 
     .hero-section .text-hold {
