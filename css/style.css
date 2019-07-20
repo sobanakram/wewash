@@ -203,6 +203,13 @@ a {
   color: #1d9dff;
 }
 
+.footer .content-wrapper {
+  align-items: center;
+}
+
+.footer .logo {
+  width: 200px;
+}
 .sbuscribe-wrapper {
   display: flex;
   justify-content: space-between;
